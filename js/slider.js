@@ -59,15 +59,15 @@ function moveSlide(num) {
 
   if (currentIdx == slideCount || currentIdx == -slideCount) {
     setTimeout(function () {
-      slides.style.left = "0px";
+      slides.style.left = "-2000px";
       currentIdx = 0;
     }, 500);
     setTimeout(function () {
       slides.classList.remove("animated");
-    }, 400);
+    }, 300);
     setTimeout(function () {
       slides.classList.add("animated");
-    }, 700);
+    }, 600);
   }
 
   console.log(currentIdx, slideCount);
