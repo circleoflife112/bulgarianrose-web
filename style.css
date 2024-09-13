@@ -395,6 +395,7 @@ p {
 #other_events_wrap {
   max-width: 1920px;
   height: 60vh;
+  /* border: solid 1px red; */
   background-color: #fcf4f8;
 }
 
@@ -402,10 +403,9 @@ p {
   max-width: 1440px;
   height: 250px;
   margin: 0 auto;
+  /* border: solid 1px blue; */
   display: flex;
   justify-content: space-around;
-  margin-right: 2rem;
-  margin-left: 2rem;
   margin-top: 5rem;
 }
 
@@ -813,8 +813,6 @@ p {
 /** 브랜드 스토리 커스텀 **/
 
 #brand_story {
-  position: static;
-  max-width: 1440px;
   height: 60vh;
   margin: 10rem 2rem;
   background-image: url(img/rose-background2.jpg);
