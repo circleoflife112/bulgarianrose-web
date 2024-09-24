@@ -59,7 +59,7 @@ function moveSlide(num) {
 
   if (currentIdx == slideCount || currentIdx == -slideCount) {
     setTimeout(function () {
-      slides.style.left = "-2000px";
+      slides.style.left = "0px";
       currentIdx = 0;
     }, 500);
     setTimeout(function () {
