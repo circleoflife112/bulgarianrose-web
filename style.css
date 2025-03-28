@@ -2010,6 +2010,15 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  #whole_event {
+    height: 160vh;
+  }
+
+  #other_events_wrap > #other_events h4 {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+
   /** all time item slider start **/
 
   #alltime_product {
@@ -2088,6 +2097,15 @@ footer {
 
   .next-btn {
     right: 8%;
+  }
+
+  #brand_story_wrap h1 {
+    font-size: 1.5rem;
+  }
+
+  #brand_story_wrap h4 {
+    font-size: 0.8rem;
+    vertical-align: middle;
   }
 
   /** 모바일 품목별 섹션 **/
