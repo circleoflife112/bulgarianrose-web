@@ -19,18 +19,18 @@ const x = setInterval(function () {
   // Time calculations for days, hours, minutes and seconds
   const days = Math.floor(distance / (1000 * 60 * 60 * 24)); // 아마 1초마다 60초 60분 24시간
   const hours = String(
-    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
   ).padStart(2, "0");
   const minutes = String(
-    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
   ).padStart(2, "0");
   const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(
     2,
-    "0"
+    "0",
   );
 
   // Display the result in the element with id
-  const clock = document.getElementById("countdown_clock");
+  const clock = document.querySelector(".countdown_clock");
 
   clock.innerText =
     days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";

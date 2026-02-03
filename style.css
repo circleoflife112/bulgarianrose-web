@@ -1,76 +1,3 @@
-/* <uniquifier>: Use a unique and descriptive class name
- <weight>: Use a value from 400 to 700
-
-.lora-<uniquifier> {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.noto-sans-kr-<uniquifier> {
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-/* .sedan-sc-regular {
-  font-family: "Sedan SC", serif;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-/* .bree-serif-regular {
-  font-family: "Bree Serif", serif;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-/* <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-/* 
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Pretendard-light';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-light.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Pretendard-Bold';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-} */
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 700 */
-
-/* .montagu-slab-<uniquifier> {
-  font-family: "Montagu Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -79,9 +6,9 @@
   font-style: normal;
 }
 
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 body,
 ul,
@@ -177,6 +104,7 @@ html::-webkit-scrollbar-thumb {
   height: 70px;
   width: 95%;
   position: fixed;
+  z-index: 3;
   top: 1rem;
   left: 50%;
   transform: translate(-50%, 0);
@@ -313,25 +241,22 @@ p {
   margin-left: 2rem;
 }
 
-.event_introduce > h1 {
+.event_introduce .event_title {
+  color: #f276a1;
   font-family: "Bree Serif", serif;
   font-weight: 400;
   font-size: 52px;
   line-height: 0.5;
 }
 
-.event_introduce > .main_title_event {
-  color: #f276a1;
-}
-
-#main_contents > #main_event h4 {
+#main_contents .event_sub_title {
   font-family: "Pretendard-Bold";
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1;
 }
 
-#main_contents > #main_event h5 {
+#main_contents .event_content {
   font-family: "Pretendard-light";
   font-size: 1.1rem;
   font-weight: 100;
@@ -346,14 +271,14 @@ p {
   padding: 0rem 2rem;
 }
 
-.countdown > h4 {
+.countdown .event_date {
   font-family: "Bree Serif", serif;
   font-weight: 400;
   font-size: 1.2rem;
   color: #f276a1;
 }
 
-.countdown > h1 {
+.countdown .countdown_clock {
   font-family: "Bree Serif", serif;
   font-weight: 400;
   font-size: 52px;
@@ -1675,58 +1600,6 @@ footer {
     line-height: 1.5;
   }
 
-  /** 모바일 품목별 분류 섹션 **/
-
-  /** #other_events {
-    max-width: 900px;
-    height: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0%;
-    padding-bottom: 1rem;
-  }
-
-  #other_events li {
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 0;
-  }
-
-  #other_events > .thum > a {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #other_events > .thum > a > .arrow_icon {
-    position: static;
-    width: 20%;
-    text-align: right;
-    padding: 2rem;
-    vertical-align: middle;
-  }
-
-  #other_events > .thum > a > .arrow_icon > i {
-    width: 30px;
-    height: 30px;
-    font-size: 1rem;
-  }
-
-  #other_events > .thum > a p {
-    font-size: 1rem;
-  }
-
-  #other_events > .thum h4 {
-    position: static;
-    flex-grow: 2;
-    vertical-align: middle;
-    font-size: 1.4rem;
-    border-radius: 40px;
-    padding: 0.2rem 2rem;
-  } **/
-
   #mobile_product_type {
     max-width: 900px;
     height: auto;
@@ -1897,6 +1770,11 @@ footer {
     grid-template-rows: 1;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .logo_containter {
+    width: 100%;
+    height: 100%;
   }
 
   #bulgarianrose_logo {
