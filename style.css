@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 ul,
 li {
@@ -159,7 +163,7 @@ html::-webkit-scrollbar-thumb {
 #second-menu {
   position: absolute;
   min-height: 30rem;
-  width: 95%;
+  width: 100%;
   top: 70px;
   left: 0;
   right: 0;
@@ -233,7 +237,6 @@ p {
   height: 100%;
   display: grid;
   margin-left: 2rem;
-  grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
 
@@ -281,8 +284,8 @@ p {
 .countdown .countdown_clock {
   font-family: "Bree Serif", serif;
   font-weight: 400;
-  font-size: 52px;
-  line-height: 0;
+  font-size: 3rem;
+  margin: 0.5rem 0;
   text-shadow: 0px 0px 5px #f3cce0;
 }
 
@@ -337,7 +340,6 @@ p {
 #other_events_wrap {
   max-width: 1920px;
   height: 60vh;
-  /* border: solid 1px red; */
   background-color: #fcf4f8;
 }
 
@@ -1267,8 +1269,8 @@ footer {
   }
 
   #main_contents {
-    max-height: 750px;
-    width: 100%;
+    height: auto;
+    max-height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -1284,7 +1286,7 @@ footer {
     grid-template-rows: repeat(3, 1fr);
   }
 
-  #main_contents > #main_event > .event_introduce {
+  #main_contents .event_introduce {
     margin-left: 0;
   }
 
@@ -1888,8 +1890,15 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  #whole_event {
-    height: 160vh;
+  /** event part start **/
+
+  .event_introduce .event_title {
+    font-size: 30px;
+    margin: 1rem 0;
+  }
+
+  .countdown .countdown_clock {
+    font-size: 30px;
   }
 
   #other_events_wrap > #other_events h4 {
@@ -1986,94 +1995,6 @@ footer {
     vertical-align: middle;
   }
 
-  /** 모바일 품목별 섹션 **/
-
-  /* #mobile_product_type {
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-  }
-
-  #mobile_product_type_wrap {
-    width: 100%;
-    height: 100%;
-  }
-
-  #mobile_product_type_wrap > h1 {
-    text-align: center;
-    line-height: 0.3;
-    margin-left: 2rem;
-    font-size: 2.2rem;
-  }
-
-  #mobile_product_type_wrap > h1:nth-of-type(2) {
-    color: #f276a1;
-  }
-
-  #mobile_sort_of_product_wrap {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  #mobile_sort_of_product_wrap > #mobile_sort_of_product {
-    width: 90%;
-    height: 90%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-  }
-
-  .mobile_thum {
-    width: 90%;
-    height: 70px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 0px 15px #f3cce0;
-    border-radius: 100px;
-    margin: 1rem 0;
-  }
-
-  .mobile_thum > a {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .mobile_thum > a::before {
-    content: "";
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-  }
-
-  .mobile_thum > button {
-    border: none;
-    background-color: white;
-    border-radius: 20px;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    font-family: "Bree Serif", serif;
-  }
-
-  .mobile_thum > a > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  } */
-
   #brand_story {
     margin: 0;
   }
@@ -2081,7 +2002,6 @@ footer {
   /** footer custom **/
 
   footer {
-    max-width: 430px;
     padding: 2rem;
     margin-top: 0;
   }
